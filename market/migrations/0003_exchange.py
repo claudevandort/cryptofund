@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
             name='Exchange',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=250)),
+                ('name', models.CharField(max_length=250, unique=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('modified_at', models.DateTimeField(auto_now=True)),
             ],
