@@ -52,12 +52,12 @@ class Candle(models.Model):
     open_at = models.DateTimeField()
     close_at = models.DateTimeField()
 
-    open = models.FloatField()
-    close = models.FloatField()
-    high = models.FloatField()
-    low = models.FloatField()
+    open = models.FloatField(null=True)
+    close = models.FloatField(null=True)
+    high = models.FloatField(null=True)
+    low = models.FloatField(null=True)
 
-    volume = models.FloatField()
+    volume = models.FloatField(null=True)
     closed = models.BooleanField(default=False)
 
     created_at = models.DateTimeField(auto_now_add=True)
